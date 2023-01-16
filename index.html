@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning</title>
+	<link rel="stylesheet" href="style.css"></link>
+	<script src="https://unpkg.com/vue@next"></script>		
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>	
+</head>
+<body>
+
+	<div id="app" v-cloak>
+		<div id="section">
+			<!-- <h3>CSS3 Tool</h3> -->
+			<div id="content">
+				<div id="col-1">
+
+					<label for="pers">perspective: {{ pers }} px</label>
+					<input type="range" id="pers" name="pers" min="0" max="250" value="0" v-model="pers" step="10">
+
+					<label for="rot-x">rotateX: {{ rot_x }} deg</label>
+					<input type="range" id="rot-x" name="rot-x" min="0" max="250" value="0" v-model="rot_x" step="10">
+
+					<label for="rot-y">rotateY: {{ rot_y }} deg</label>
+					<input type="range" id="rot-y" name="rot-y" min="0" max="250" value="0" v-model="rot_y" step="10">
+
+					<label for="rot-z">rotateZ: {{ rot_z }} deg</label>
+					<input type="range" id="rot-z" name="rot-z" min="0" max="250" value="0" v-model="rot_z" step="10">														
+				</div>
+				<div id="col-2" :style="perspective">
+					<div id="box" :style="rotate">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
+
